@@ -1,0 +1,236 @@
+
+:root {
+    --vmarg-cont: 3vw;
+    --wd-logo: 15vw;
+
+    --video-width: 50vw;
+}
+
+#logo-img-mobile {
+    display: none;   
+}
+
+html, body {
+    margin: 0;
+
+}
+
+header {
+    margin: 0vw 0vw 0vw 0vw;
+    padding: 1vw 3.5vw 1vw 3.5vw;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    background: hsla(54, 100%, 94%, 1);
+    color: rgb(175, 42, 42);
+
+}
+
+header a {
+    color: rgb(175, 42, 42);
+    font-family: 'Crimson Text', serif;
+    font-size: 2.3vw;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: rgb(255, 55, 55);
+    text-decoration: underline;
+}
+
+.header-logo {
+    width: var(--wd-logo);
+    height: calc( .5 * var(--wd-logo) );
+
+}
+
+ul {    
+    list-style: none;
+    margin: 0;
+    font-size: 2.0vw;
+    padding-left: 2.2vw;
+    display: inline-flex;
+}
+
+li {
+    text-align: center;
+}
+
+li:before { 
+    content: '<';
+    font-family: monospace;
+
+}
+
+li:after { 
+    content: '/>';
+    font-family: monospace;
+
+}
+
+#title {
+    text-align: center;
+}
+
+.nav-link {
+
+}
+
+html {
+
+}
+
+#container {
+    position: absolute;
+    top: calc( .5 * var(--wd-logo) );
+    padding: var(--vmarg-cont) 2vw;
+    background: rgb(175, 42, 42);
+    color: hsla(54, 100%, 94%, 1);
+}
+
+section {
+    text-align: justify;
+    display: flex;
+    align-items: center;
+
+}
+
+.sub-section {
+    width: 50%;
+    margin: 3vw;
+}
+
+.sub-section-video {
+    width: var(--video-width);
+    height: calc(0.56 * var(--video-width));
+    margin: 3vw;
+}
+
+.sub-section img {
+    width: 40vw;
+    display: block;
+    margin: auto;
+}
+
+.anchor {
+    position: relative;
+}
+
+.anchor a {
+    position: absolute;
+    left: 0px;
+    top: calc( (((.5 * var(--wd-logo)) + var(--vmarg-cont)*2)) * -1  );
+}
+
+.flex-elements {
+    display: flex;
+}
+
+.sub-section form {
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Francois One', sans-serif;
+}
+
+p, label, input {
+
+    font-family: 'Bree Serif', serif;
+}
+
+#submit, #email {
+    font-size: 2vw;
+}
+
+#submit {
+    margin: 3vw 0; 
+}
+
+@media (max-width:800px)
+{
+    :root {
+        /*--vmarg-cont: 3vw;*/
+        --wd-logo: 45vw;
+
+        --video-width: 90vw;
+    }
+
+    header a, li:before, li:after {
+        font-size: 5.3vw;
+        line-height: 5vw;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    .sub-section {
+        width: 100%;
+        margin: 0;
+    }
+
+    .sub-section img {
+        width: 95vw;
+        padding-top: 6vw;
+    }
+
+    #video-section {
+        order: 2;
+    }
+
+    #sec-section-text {
+        order: 1;
+    }
+
+    #header-img {
+        display: none;
+    }
+
+    p, label, input {
+        font-size: large;
+    }
+
+    #submit, #email {
+        font-size: large;
+    }
+
+    #submit {
+        margin-top: 5vw;
+    }
+
+    #logo-img-mobile {
+        display: block;
+        position: fixed;
+        width: 95vw;
+        margin: 2vw;
+        top: 40vh;
+
+        /*filter: invert(100%);*/
+    }
+
+    #container {
+        background: rgba(175, 42, 42, 0.75);
+    }
+
+}
+
+@media (orientation:landscape) {
+
+    :root {
+        --wd-logo: 15vw;
+    }
+
+    header a, li:before, li:after {
+        font-size: 5vh;
+        line-height: 5vh;
+    }
+
+    #logo-img-mobile {
+        width: 65vw;
+        margin: 17vw;
+        top: -5vh;
+        /*filter: invert(100%);*/
+    }
+}
